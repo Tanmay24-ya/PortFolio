@@ -5,6 +5,7 @@ import BriefingSection from "@/components/briefing/BriefingSection";
 import ArsenalSection from "@/components/arsenal/ArsenalSection";
 import CommandCenter from "@/components/command-center/CommandCenter";
 import Footer from "@/components/footer/Footer";
+import MissionSection from "@/components/mission/MissionSection";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <BriefingSection />
+      <MissionSection />
       <ArsenalSection />
       <CommandCenter />
       <Footer />

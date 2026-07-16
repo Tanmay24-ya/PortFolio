@@ -14,7 +14,7 @@ export default function MissionProfile() {
             className="rounded-3xl border border-white/10 bg-white/[0.03] p-8 backdrop-blur-xl"
         >
             {/* Header */}
-            <div id="missions" className="flex items-center gap-6">
+            <div className="flex items-center gap-6">
 
                 <div className="relative flex-shrink-0">
 
