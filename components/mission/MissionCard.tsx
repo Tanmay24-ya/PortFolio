@@ -110,14 +110,6 @@ export default function MissionCard({ mission }: Props) {
 
                 </div>
 
-                <Link
-                    href={`/missions/${mission.slug}`}
-                    className="mt-6 inline-flex items-center gap-2 text-cyan-400 transition-all group-hover:translate-x-1"
-                >
-                    Open Dossier
-
-                    <ArrowUpRight size={16} />
-                </Link>
 
             </div>
         </motion.div>

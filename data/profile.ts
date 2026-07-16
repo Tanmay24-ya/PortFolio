@@ -5,9 +5,9 @@ export const profile = {
 
     specialization: "AI • Full Stack • Backend Systems",
 
-    status: "Available for Internship",
+    status: "Open to Opportunities",
 
-    location: "Nagpur, India",
+    location: "Bhopal, India",
 
     about: [
         "I'm a Software Engineer passionate about building AI-powered applications and scalable backend systems. My work spans document intelligence, retail analytics, computer vision, and modern full-stack development.",

@@ -2,11 +2,10 @@
 
 import { motion } from "framer-motion";
 import EarthScene from "../earth/EarthScene";
-import BriefingSection from "@/components/briefing/BriefingSection";
 
 export default function Hero() {
     return (
-        <section id="briefing" className="relative top mx-auto flex min-h-screen max-w-7xl items-center px-8 pt-24">
+        <section className="relative top mx-auto flex min-h-screen max-w-7xl items-center px-8 pt-24">
 
             {/* LEFT */}
             <div className="w-full lg:w-1/2">
