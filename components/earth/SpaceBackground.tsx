@@ -298,7 +298,7 @@ export default function SpaceBackground({ children }: Props) {
             </div>
 
             {/* Hero content layer (above canvas at z-10) */}
-            <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl items-center gap-12 px-8 lg:flex-row">
+            <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl flex-col items-center justify-center gap-8 px-6 py-16 lg:flex-row lg:justify-between lg:py-0">
                 {children}
             </div>
         </>

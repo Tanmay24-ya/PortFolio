@@ -24,10 +24,10 @@ export default function EarthScene() {
     }, []);
 
     return (
-        <div className="relative h-[640px] w-full">
+        <div className="relative w-[300px] h-[300px] sm:w-[450px] sm:h-[450px] lg:w-[600px] lg:h-[600px]">
             {/* Outer halo glow — layered for depth */}
-            <div className="pointer-events-none absolute inset-0 m-auto h-[520px] w-[520px] rounded-full bg-cyan-500/25 blur-[130px]" />
-            <div className="pointer-events-none absolute inset-0 m-auto h-[300px] w-[300px] rounded-full bg-blue-400/10 blur-[70px]" />
+            <div className="pointer-events-none absolute inset-0 m-auto w-[80%] h-[80%] rounded-full bg-cyan-500/20 blur-[50px] sm:blur-[90px] lg:blur-[130px]" />
+            <div className="pointer-events-none absolute inset-0 m-auto w-[55%] h-[55%] rounded-full bg-blue-400/10 blur-[30px] sm:blur-[55px] lg:blur-[75px]" />
 
             <Canvas camera={{ position: [0, 0, 3.6], fov: 42 }}>
                 {/* Moonlight — very faint cool white from upper-right */}

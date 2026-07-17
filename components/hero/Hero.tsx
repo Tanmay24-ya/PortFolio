@@ -9,7 +9,7 @@ export default function Hero() {
         <section className="relative min-h-screen overflow-hidden">
             <SpaceBackground>
                 {/* LEFT — text & CTAs */}
-                <div className="w-full lg:w-1/2 px-8 pt-24 lg:pt-0 bg-null">
+                <div className="w-full lg:w-1/2 px-4 pt-16 lg:pt-0 flex flex-col items-center text-center lg:items-start lg:text-left">
                     <motion.p
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
@@ -43,19 +43,19 @@ export default function Hero() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.6 }}
-                        className="mt-10 flex gap-4"
+                        className="mt-10 flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center lg:justify-start"
                     >
-                        <button className="rounded-xl bg-cyan-400 px-7 py-4 font-semibold text-black transition hover:scale-105 hover:shadow-[0_0_24px_rgba(0,229,255,0.5)]">
+                        <button className="w-full sm:w-auto rounded-xl bg-cyan-400 px-7 py-4 font-semibold text-black transition hover:scale-105 hover:shadow-[0_0_24px_rgba(0,229,255,0.5)]">
                             Launch Missions
                         </button>
-                        <button className="rounded-xl border border-cyan-400/60 px-7 py-4 transition hover:bg-cyan-400/10 hover:border-cyan-400">
+                        <button className="w-full sm:w-auto rounded-xl border border-cyan-400/60 px-7 py-4 transition hover:bg-cyan-400/10 hover:border-cyan-400">
                             Mission Dossier
                         </button>
                     </motion.div>
                 </div>
 
                 {/* RIGHT — planet */}
-                <div className="hidden lg:flex lg:w-1/2 items-center justify-center">
+                <div className="flex w-full lg:w-1/2 items-center justify-center mt-8 lg:mt-0">
                     <EarthScene />
                 </div>
             </SpaceBackground>
