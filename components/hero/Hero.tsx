@@ -45,12 +45,18 @@ export default function Hero() {
                         transition={{ delay: 0.6 }}
                         className="mt-10 flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center lg:justify-start"
                     >
-                        <button className="w-full sm:w-auto rounded-xl bg-cyan-400 px-7 py-4 font-semibold text-black transition hover:scale-105 hover:shadow-[0_0_24px_rgba(0,229,255,0.5)]">
+                        <a
+                            href="#missions"
+                            className="w-full sm:w-auto text-center rounded-xl bg-cyan-400 px-7 py-4 font-semibold text-black transition hover:scale-105 hover:shadow-[0_0_24px_rgba(0,229,255,0.5)] cursor-pointer"
+                        >
                             Launch Missions
-                        </button>
-                        <button className="w-full sm:w-auto rounded-xl border border-cyan-400/60 px-7 py-4 transition hover:bg-cyan-400/10 hover:border-cyan-400">
+                        </a>
+                        <a
+                            href="#briefing"
+                            className="w-full sm:w-auto text-center rounded-xl border border-cyan-400/60 px-7 py-4 transition hover:bg-cyan-400/10 hover:border-cyan-400 cursor-pointer text-white"
+                        >
                             Mission Dossier
-                        </button>
+                        </a>
                     </motion.div>
                 </div>
 

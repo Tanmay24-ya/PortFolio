@@ -31,10 +31,7 @@ export default function MissionCard({ mission }: Props) {
                     {mission.id}
                 </p>
 
-                <ArrowUpRight
-                    size={18}
-                    className="transition-transform duration-300 group-hover:rotate-45"
-                />
+
             </div>
 
             {/* Title */}

@@ -29,7 +29,7 @@ export default function EarthScene() {
             <div className="pointer-events-none absolute inset-0 m-auto w-[80%] h-[80%] rounded-full bg-cyan-500/20 blur-[50px] sm:blur-[90px] lg:blur-[130px]" />
             <div className="pointer-events-none absolute inset-0 m-auto w-[55%] h-[55%] rounded-full bg-blue-400/10 blur-[30px] sm:blur-[55px] lg:blur-[75px]" />
 
-            <Canvas camera={{ position: [0, 0, 3.6], fov: 42 }}>
+            <Canvas camera={{ position: [0, 0, 4.0], fov: 42 }}>
                 {/* Moonlight — very faint cool white from upper-right */}
                 <directionalLight
                     position={[4, 3, 3]}
@@ -44,14 +44,17 @@ export default function EarthScene() {
                 {/* Distant star field inside the globe canvas */}
                 <Stars radius={30} depth={80} count={1800} factor={2} fade speed={0.3} />
 
-                <Earth />
-                <Atmosphere />
+                <group scale={1.11}>
+                    <Earth />
+                    <Atmosphere />
+                    <Scanner />
+                    <ConnectionLines />
+                    <DataNodes hoveredId={hoveredId} onHover={setHoveredId} onSelect={handleSelect} />
+                </group>
+
                 <OrbitRing />
-                <Scanner />
                 <Particles />
                 <Satellite />
-                <ConnectionLines />
-                <DataNodes hoveredId={hoveredId} onHover={setHoveredId} onSelect={handleSelect} />
 
                 <CameraRig focusTarget={focusedNode?.position ?? null} />
             </Canvas>

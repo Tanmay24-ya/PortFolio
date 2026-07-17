@@ -8,7 +8,7 @@ type Props = {
     focusTarget: [number, number, number] | null;
 };
 
-const DEFAULT_POSITION = new THREE.Vector3(0, 0, 4.5);
+const DEFAULT_POSITION = new THREE.Vector3(0, 0, 5.0);
 const lookTarget = new THREE.Vector3(0, 0, 0);
 
 export default function CameraRig({ focusTarget }: Props) {
@@ -33,7 +33,7 @@ export default function CameraRig({ focusTarget }: Props) {
         );
 
         const desiredLook = focusTarget
-            ? new THREE.Vector3(...focusTarget)
+            ? new THREE.Vector3(...focusTarget).multiplyScalar(1.11)
             : new THREE.Vector3(0, 0, 0);
 
         lookTarget.lerp(desiredLook, 0.05);
