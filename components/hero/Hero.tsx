@@ -2,70 +2,63 @@
 
 import { motion } from "framer-motion";
 import EarthScene from "../earth/EarthScene";
-import BriefingSection from "@/components/briefing/BriefingSection";
+import SpaceBackground from "../earth/SpaceBackground";
 
 export default function Hero() {
     return (
-        <section className="relative top mx-auto flex min-h-screen max-w-7xl items-center px-8 pt-24">
+        <section className="relative min-h-screen overflow-hidden">
+            <SpaceBackground>
+                {/* LEFT — text & CTAs */}
+                <div className="w-full lg:w-1/2 px-8 pt-24 lg:pt-0 bg-null">
+                    <motion.p
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        className="mb-4 text-cyan-400 tracking-[6px] uppercase text-sm"
+                    >
+                        Mission Control
+                    </motion.p>
 
-            {/* LEFT */}
-            <div className="w-full lg:w-1/2">
+                    <motion.h1
+                        initial={{ opacity: 0, y: 40 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8 }}
+                        className="text-6xl font-black leading-none md:text-8xl"
+                    >
+                        Tanmay
+                        <br />
+                        <span className="text-cyan-400">Dixit</span>
+                    </motion.h1>
 
-                <motion.p
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    className="mb-4 text-cyan-400 tracking-[6px] uppercase"
-                >
-                    Mission Control
-                </motion.p>
+                    <motion.p
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ delay: 0.4 }}
+                        className="mt-8 max-w-xl text-l leading-8 text-white/70"
+                    >
+                        Building AI-powered products, scalable backend systems,
+                        and intelligent experiences that solve real-world problems.
+                    </motion.p>
 
-                <motion.h1
-                    initial={{ opacity: 0, y: 40 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: .8 }}
-                    className="text-6xl font-black leading-none md:text-8xl"
-                >
-                    Tanmay
-                    <br />
-                    <span className="text-cyan-400">Dixit</span>
-                </motion.h1>
-
-                <motion.p
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: .4 }}
-                    className="mt-8 max-w-xl text-xl leading-8 text-white/70"
-                >
-                    Building AI-powered products, scalable backend systems,
-                    and intelligent experiences that solve real-world problems.
-                </motion.p>
-
-                <div className="mt-10 flex gap-4">
-                    <button className="rounded-xl bg-cyan-400 px-7 py-4 font-semibold text-black transition hover:scale-105">
-                        Launch Missions
-                    </button>
-
-                    <button className="rounded-xl border border-cyan-400 px-7 py-4 transition hover:bg-cyan-400/10">
-                        Mission Dossier
-                    </button>
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.6 }}
+                        className="mt-10 flex gap-4"
+                    >
+                        <button className="rounded-xl bg-cyan-400 px-7 py-4 font-semibold text-black transition hover:scale-105 hover:shadow-[0_0_24px_rgba(0,229,255,0.5)]">
+                            Launch Missions
+                        </button>
+                        <button className="rounded-xl border border-cyan-400/60 px-7 py-4 transition hover:bg-cyan-400/10 hover:border-cyan-400">
+                            Mission Dossier
+                        </button>
+                    </motion.div>
                 </div>
 
-            </div>
-
-            {/* RIGHT */}
-            <div className="hidden lg:flex w-1/2 items-center justify-center">
-
-                <div className="flex h-[500px] w-[500px] items-center justify-center rounded-full border border-cyan-500/20 bg-cyan-500/5">
-
-                    <span className="text-cyan-400 tracking-[6px] uppercase">
-
-                        <EarthScene />
-                    </span>
-
+                {/* RIGHT — planet */}
+                <div className="hidden lg:flex lg:w-1/2 items-center justify-center">
+                    <EarthScene />
                 </div>
-
-            </div>
-
+            </SpaceBackground>
         </section>
     );
 }
