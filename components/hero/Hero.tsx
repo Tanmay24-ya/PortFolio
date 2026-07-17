@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import EarthScene from "../earth/EarthScene";
+import BriefingSection from "@/components/briefing/BriefingSection";
 
 export default function Hero() {
     return (

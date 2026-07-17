@@ -3,6 +3,7 @@
 import { profile } from "@/data/profile";
 import { motion } from "framer-motion";
 import { MapPin, Cpu, Briefcase } from "lucide-react";
+import Image from "next/image";
 
 export default function MissionProfile() {
     return (
@@ -17,12 +18,17 @@ export default function MissionProfile() {
             <div className="flex items-center gap-6">
 
                 <div className="relative flex-shrink-0">
-
-                    {/* Replace this with your image later */}
-                    <div className="h-28 w-28 rounded-full bg-gradient-to-br from-cyan-500 to-blue-600" />
+                    <div className="relative h-28 w-28 overflow-hidden rounded-full border border-white/10">
+                        <Image
+                            src="/Images/profile_img.png"
+                            alt="Tanmay"
+                            fill
+                            className="object-cover"
+                            priority
+                        />
+                    </div>
 
                     <span className="absolute bottom-2 right-2 h-5 w-5 rounded-full border-4 border-[#05070B] bg-green-400" />
-
                 </div>
 
                 <div>
